@@ -138,6 +138,7 @@
        .service img { 
            width: 70%;
            border-radius: 10px;
+           }
 
        .product img,
        .service img {
@@ -351,7 +352,7 @@ nav {
        </h1>
        <nav>
            <a href="#about">このページについて</a>
-           <a href="product">製品</a>
+           <a href="#product">製品</a>
            <a href="service">サービス</a>
            <!-- ハンバーガーボタン -->
 <button id="menuBtn" class="menu-btn">
@@ -359,9 +360,8 @@ nav {
   <span></span>
   <span></span>
 </button>
-
        </nav>
-   </header>
+        </header>
     
   <div class="hero">
     <div class="fade-in">
@@ -374,7 +374,7 @@ nav {
     <h2 class="section-title fade-in">このページについて</h2>
         <p>このページは世の中は便利になりすぎていると感じたNovel Starという人を社長として営業している企業の製品サイトです。<br>
         ホームページは<a href="https://novelstar354.github.io/starcorperation/">こちら</a>。</p>
-
+</section>
 
 
   <section id="product">
@@ -428,7 +428,7 @@ nav {
             <p>パンが膨らむどころかしぼむパンミックスです。小腹を満たせません。</p>
 
     <div class="service fade-in">
-         <img src="https://media.loom-app.com/roomie/dist/images/2023/05/3f27f1a3ab6106bda5a279240ec8f54b-1.jpeg?w=585" alt="折りたたみ達人"
+         <img src="https://media.loom-app.com/roomie/dist/images/2023/05/3f27f1a3ab6106bda5a279240ec8f54b-1.jpeg?w=585" alt="折りたたみ達人">
          <h4>折りたたみ達傘</h4>
          <p>一度閉じると開かない傘。傘を閉じる能力だけは完璧。</p> 
     </div>
@@ -561,6 +561,21 @@ nav {
             behavior: "smooth"
         });
     });
+    const menuBtn = document.getElementById("menuBtn");
+const nav = document.querySelector("nav");
+const overlay = document.getElementById("menuOverlay");
+
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+  nav.classList.toggle("open");
+  overlay.classList.toggle("show");
+});
+
+overlay.addEventListener("click", () => {
+  menuBtn.classList.remove("active");
+  nav.classList.remove("open");
+  overlay.classList.remove("show");
+});
 </script>
 
         
