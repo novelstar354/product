@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
@@ -61,8 +61,8 @@
 
     body {
       font-family: "Noto Sans JP", sans-serif;
-      background: #000;
-      color: #fff;
+      background: #fff;
+      color: #000;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -209,7 +209,7 @@
   right: 20px;
   width: 42px;
   height: 42px;
-  background: rgba(255,255,255,0.1);
+  background: black;
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 8px;
   cursor: pointer;
@@ -250,6 +250,7 @@ nav a {
 /* 表示状態 */
 nav.open {
   right: 0;
+  background: #000;
 }
 
 /* PCでは常に表示 */
@@ -336,6 +337,7 @@ nav {
     transform: translateY(-11px) rotate(-45deg);
   }
 }
+
  /* ===== ナビ文字を巨大化 ===== */
 nav.open a {
   font-size: 1.5rem;
@@ -366,14 +368,13 @@ nav.open li:nth-child(3) { transition-delay: 0.50s; }
   transition: opacity 0.4s ease,
               transform 0.4s cubic-bezier(.2,1.4,.4,1);
 }
-
   </style>
 </head>
     
 <body>
     
 
-   　<!-- 背景オーバーレイ -->
+   <!-- 背景オーバーレイ -->
 <div id="menuOverlay" class="menu-overlay"></div>
 
     <header>
@@ -385,7 +386,7 @@ nav.open li:nth-child(3) { transition-delay: 0.50s; }
            <ul>
            <li><a href="#about">このページについて</a></li>
            <li><a href="#product">製品</a></li>
-          <li> <a href="service">サービス</a></li>
+          <li> <a href="#service">サービス</a></li>
                </ul>
            <!-- ハンバーガーボタン -->
 <button id="menuBtn" class="menu-btn">
@@ -536,11 +537,6 @@ nav.open li:nth-child(3) { transition-delay: 0.50s; }
           <h4>気まぐれスケジュールアプリ</h4>
           <p>気まぐれにスケジュールが増減します。</p>
           </div>
-      <div class="service fade-in">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj1wZ8zW4WNCR42s3H08JmL8waGOY3BpwTg8uBmYMeQ&s=10""">
-          <h4>最強のメモアプリ：改ざんメモ v4</h4>
-          <p>メモ帳として活用できますが、書いた文字が変わったり、消えたりします。</p>
-        </div>
     <div class="service fade-in">
       <img src="https://www.silhouette-illust.com/wp-content/uploads/2017/09/travel_odekake_38105-600x600.jpg" alt="">
      <h4>最高の旅行代理店：ステイホームツアーズ</h4>
